@@ -5,3 +5,11 @@
 body {
   @apply bg-zinc-900 h-full overflow-hidden;
 }
+
+#__next {
+  @apply h-full;
+}
+
+html {
+  @apply h-full;
+}

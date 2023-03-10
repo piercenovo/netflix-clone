@@ -15,6 +15,7 @@ export const Input: React.FC<InputProps> = ({ id, onChange, value, label, type }
         id={id}
         onChange={onChange}
         value={value}
+        type={type}
         className='
         block
         rounded-md
@@ -50,7 +51,7 @@ export const Input: React.FC<InputProps> = ({ id, onChange, value, label, type }
         peer-focus:scale-75
         peer-focus:-translate-y-3
         '
-        htmlFor={type}
+        htmlFor={id}
       >
         {label}
       </label>

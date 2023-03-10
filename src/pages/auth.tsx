@@ -1,5 +1,5 @@
 import { Input } from '@/components/Input'
-import React, { useCallback, useState } from 'react'
+import { useCallback, useState } from 'react'
 
 export default function Auth () {
   const [email, setEmail] = useState('')

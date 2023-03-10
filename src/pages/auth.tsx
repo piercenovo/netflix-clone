@@ -1,5 +1,12 @@
 import { Input } from '@/components/Input'
+import { AuthIcon } from '@/components/AuthIcon'
 import { useCallback, useState } from 'react'
+import { signIn } from 'next-auth/react'
+import { useRouter } from 'next/router'
+import axios from 'axios'
+
+import { FcGoogle } from 'react-icons/fc'
+import { FaGithub } from 'react-icons/fa'
 
 export default function Auth () {
   const [email, setEmail] = useState('')
@@ -8,9 +15,40 @@ export default function Auth () {
 
   const [variant, setVariant] = useState('login')
 
+  const router = useRouter()
+
   const toggleVariant = useCallback(() => {
     setVariant((currentVariant) => currentVariant === 'login' ? 'register' : 'login')
   }, [])
+
+  const login = useCallback(async () => {
+    try {
+      await signIn('credentials', {
+        email,
+        password,
+        redirect: false,
+        callbackUrl: '/'
+      })
+
+      router.push('/')
+    } catch (error) {
+      console.log(error)
+    }
+  }, [email, password, router])
+
+  const register = useCallback(async () => {
+    try {
+      await axios.post('/api/register', {
+        email,
+        name,
+        password
+      })
+
+      login()
+    } catch (error) {
+      console.log(error)
+    }
+  }, [email, name, password, login])
 
   return (
     <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
@@ -19,7 +57,7 @@ export default function Auth () {
           <img src='/images/logo.png' alt='Logo' className='h-12' />
         </nav>
         <div className='flex justify-center'>
-          <div className='bg-black bg-opacity-70 px-10 py-10 md:px-16 md:py-16 self-center mt-2 md:w-3/4 md:max-w-md rounded-md w-full'>
+          <div className='bg-black/70 px-10 py-10 md:px-16 md:py-16 self-center mt-2 md:w-3/4 md:max-w-md rounded-md w-full'>
             <h2 className='text-white text-4xl mb-8 font-semibold'>
               {variant === 'login' ? 'Sign In' : 'Sign Up'}
             </h2>
@@ -46,9 +84,17 @@ export default function Auth () {
                 type='password'
                 value={password}
               />
-              <button className='bg-red-600 py-3 font-medium text-white rounded-md w-full mt-7 hover:bg-red-700 transition'>
+              <button onClick={variant === 'login' ? login : register} className='bg-red-600 py-3 font-medium text-white rounded-md w-full mt-7 hover:bg-red-700 transition'>
                 {variant === 'login' ? 'Sign In' : 'Sign Up'}
               </button>
+              <div className='flex flex-row justify-center items-center gap-4 mt-8'>
+                <AuthIcon onClick={() => signIn('google', { callbackUrl: '/' })}>
+                  <FcGoogle size={32} />
+                </AuthIcon>
+                <AuthIcon onClick={() => signIn('github', { callbackUrl: '/' })}>
+                  <FaGithub size={32} />
+                </AuthIcon>
+              </div>
               <p className='text-neutral-500 mt-12'>
                 {variant === 'login' ? 'First time using Netflix?' : 'Already have an account?'}
                 <span onClick={toggleVariant} className='text-white ml-1 hover:underline cursor-pointer'>

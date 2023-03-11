@@ -2,7 +2,6 @@ import { Input } from '@/components/Input'
 import { AuthIcon } from '@/components/AuthIcon'
 import { useCallback, useState } from 'react'
 import { signIn } from 'next-auth/react'
-import { useRouter } from 'next/router'
 import axios from 'axios'
 
 import { FcGoogle } from 'react-icons/fc'
@@ -15,8 +14,6 @@ export default function Auth () {
 
   const [variant, setVariant] = useState('login')
 
-  const router = useRouter()
-
   const toggleVariant = useCallback(() => {
     setVariant((currentVariant) => currentVariant === 'login' ? 'register' : 'login')
   }, [])
@@ -27,14 +24,12 @@ export default function Auth () {
         email,
         password,
         redirect: false,
-        callbackUrl: '/'
+        callbackUrl: '/profiles'
       })
-
-      router.push('/')
     } catch (error) {
       console.log(error)
     }
-  }, [email, password, router])
+  }, [email, password])
 
   const register = useCallback(async () => {
     try {
@@ -88,10 +83,10 @@ export default function Auth () {
                 {variant === 'login' ? 'Sign In' : 'Sign Up'}
               </button>
               <div className='flex flex-row justify-center items-center gap-4 mt-8'>
-                <AuthIcon onClick={() => signIn('google', { callbackUrl: '/' })}>
+                <AuthIcon onClick={() => signIn('google', { callbackUrl: '/profiles' })}>
                   <FcGoogle size={32} />
                 </AuthIcon>
-                <AuthIcon onClick={() => signIn('github', { callbackUrl: '/' })}>
+                <AuthIcon onClick={() => signIn('github', { callbackUrl: '/profiles' })}>
                   <FaGithub size={32} />
                 </AuthIcon>
               </div>

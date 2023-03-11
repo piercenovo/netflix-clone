@@ -22,7 +22,7 @@ export async function getServerSideProps (context: NextPageContext) {
 export default function Home () {
   const { data: user } = useCurrentUser()
   return (
-    <div className='flex flex-col gap-4 justify-center items-center w-full h-3/4'>
+    <div className='flex flex-col gap-4 justify-center items-center w-full h-full'>
       <h1 className='text-white text-2xl font-medium'>
         Netflix Clone
       </h1>

@@ -70,6 +70,7 @@ export function Billboard () {
               flex
               flex-row
               items-center
+              justify-center
               hover:bg-opacity-20
               transition
               gap-1 md:gap-2

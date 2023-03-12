@@ -17,7 +17,7 @@ const AccountMenu: React.FC<AccountMenuProps> = ({ visible }) => {
       <div className='flex flex-col gap-3'>
         <div className='px-4 group/item flex flex-row gap-3 items-center w-full'>
           <figure className='w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 rounded-md overflow-hidden'>
-            <img src='/images/default-red.png' alt='Profile' />
+            <img src='/images/default-green.png' alt='Profile' />
           </figure>
           <p className='text-white text-sm group-hover/item:underline'>
             {currentUser?.name}

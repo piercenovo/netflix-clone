@@ -75,7 +75,7 @@ export function Navbar () {
             className='flex flex-row items-center gap-2 cursor-pointer relative'
           >
             <figure className='w-7 h-7 md:w-8 md:h-8 lg:w-9 lg:h-9 rounded-md overflow-hidden'>
-              <img src='/images/default-red.png' alt='Profile' />
+              <img src='/images/default-green.png' alt='Profile' />
             </figure>
             <AiFillCaretDown
               className={`text-white transition hidden

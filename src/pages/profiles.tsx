@@ -48,7 +48,7 @@ export default function Profiles () {
                 overflow-hidden
               '
               >
-                <img src='/images/default-red.png' alt='Profile' />
+                <img src='/images/default-green.png' alt='Profile' />
               </figure>
 
               <p

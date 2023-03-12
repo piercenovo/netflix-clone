@@ -1,8 +1,19 @@
+import { useBillboard } from '@/hooks/useBillboard'
+import { useInfoModal } from '@/hooks/useInfoModal'
+import { useCallback } from 'react'
 import { AiOutlineInfoCircle } from 'react-icons/ai'
 
 const InfoButton = () => {
+  const { data } = useBillboard()
+  const { openModal } = useInfoModal()
+
+  const handleOpenModal = useCallback(() => {
+    openModal(data?.id)
+  }, [openModal, data?.id])
+
   return (
     <button
+      onClick={handleOpenModal}
       className='
       bg-white
       text-white

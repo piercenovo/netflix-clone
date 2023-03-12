@@ -26,7 +26,6 @@ export function Navbar () {
       items-center
       transition
       duration-500
-      bg-[#141414]/90
       ${showBackground ? 'bg-[#141414]/90' : ''}
       `}
       >

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-[#141414] h-full overflow-x-hidden;
+  @apply bg-[#141414] h-full overflow-x-hidden select-none;
 }
 
 #__next {
@@ -18,11 +18,6 @@ html {
   scrollbar-width: thin;
   scrollbar-color: #2c4d7c transparent;
   scroll-behavior: smooth;
-}
-
-::selection {
-  background-color: #71777b;
-  color: white;
 }
 
 html::-webkit-scrollbar {

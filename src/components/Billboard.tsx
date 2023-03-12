@@ -48,13 +48,14 @@ export function Billboard () {
           md:mt-4
           lg:mt-6
           w-[50%]
-          lg:w-[40%]
+          lg:w-[45%]
+          xl:w-[40%]
           drop-shadow-xl
         '
         >
           {data?.description}
         </p>
-        <div className='flex flex-row  items-center mt-3 md:mt-5 lg:mt-7 xl:mt-7 gap-3'>
+        <div className='flex flex-row  items-center mt-3 md:mt-5 lg:mt-6 gap-3'>
           <button
             className='
               bg-white

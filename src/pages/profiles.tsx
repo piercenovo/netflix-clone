@@ -33,7 +33,7 @@ export default function Profiles () {
         <div className='flex items-center justify-center gap-6 mt-6 md:mt-8 lg:mt-10 xl:mt-12'>
           <div onClick={() => router.push('/')}>
             <div className='group flex-row w-24 md:w-32 lg:w-40 xl:w-44 mx-auto'>
-              <div
+              <figure
                 className='
                 w-24 md:w-32 lg:w-40 xl:w-44
                 h-24 md:h-32 lg:h-40 xl:h-44
@@ -49,11 +49,11 @@ export default function Profiles () {
               '
               >
                 <img src='/images/default-red.png' alt='Profile' />
-              </div>
+              </figure>
 
               <p
                 className='
-                mt-2 lg:mt-3 xl:mt-4
+                mt-1 md:mt-2 lg:mt-3 xl:mt-4
                 text-gray-400
                 text-base md:text-xl lg:text-2xl xl:text-3xl
                 text-center

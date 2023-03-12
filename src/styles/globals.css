@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-zinc-900 h-full overflow-hidden;
+  @apply bg-[#141414] h-full overflow-x-hidden;
 }
 
 #__next {
@@ -12,4 +12,27 @@ body {
 
 html {
   @apply h-full;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #2c4d7c transparent;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: #535c68;
+  color: white;
+}
+
+html::-webkit-scrollbar {
+  @apply w-[.85rem];
+}
+
+html::-webkit-scrollbar-thumb {
+  @apply rounded-full border-[3px] border-solid border-transparent bg-gray-700 bg-clip-content;
+}
+
+html::-webkit-scrollbar-track {
+  @apply bg-transparent;
 }

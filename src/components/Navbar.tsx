@@ -65,10 +65,10 @@ export function Navbar () {
 
         <div className='flex flex-row ml-auto gap-7 items-center'>
           <div className='text-gray-200 hover:text-gray-300 cursor-pointer transition'>
-            <BsSearch />
+            <BsSearch className='text-sm lg:text-base xl:text-lg' />
           </div>
           <div className='text-gray-200 hover:text-gray-300 cursor-pointer transition'>
-            <BsBell />
+            <BsBell className='text-sm lg:text-base xl:text-lg' />
           </div>
           <button
             onClick={toggleAccountMenu}

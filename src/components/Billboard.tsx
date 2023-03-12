@@ -22,14 +22,14 @@ export function Billboard () {
         src={data?.videoUrl}
         poster={data?.thumbnailUrl}
       />
-      <div className='absolute top-[30%] md:top-[40%] ml-10 md:ml-16'>
+      <div className='absolute top-[30%] lg:top-[30%] ml-10 md:ml-16'>
         <p className='
         text-white
         text-xl
         md:text-5xl
         lg:text-6xl
         h-full
-        w-[70%]
+        w-[60%]
         font-bold
         drop-shadow-xl
         '
@@ -38,12 +38,11 @@ export function Billboard () {
         </p>
         <p className='
           text-white
-          text-[8px]
+          text-[0.57rem]
           md:text-lg
           mt-3
-          md:md-8
-          w-[90%]
-          md:w-[80%]
+          md:mt-8
+          w-[60%]
           lg:w-[50%]
           drop-shadow-xl
         '
@@ -58,16 +57,16 @@ export function Billboard () {
               bg-opacity-30
               rounded-md
               py-1 md:py-2
-              px-2 md:px-4
+              px-3 md:px-4
               w-auto
-              text-sm lg:text-lg
+              text-[0.65rem] md:text-sm lg:text-lg
               font-semibold
               flex
               flex-row
               items-center
               hover:bg-opacity-20
               transition
-              gap-2
+              gap-1 md:gap-2
           '
           >
             <AiOutlineInfoCircle />

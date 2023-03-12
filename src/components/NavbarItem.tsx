@@ -6,7 +6,7 @@ interface NavbarItemProps {
 
 const NavbarItem: React.FC<NavbarItemProps> = ({ label }) => {
   return (
-    <li className='text-white cursor-pointer hover:text-gray-300 transition text-sm xl:text-lg'>
+    <li className='text-white cursor-pointer hover:text-gray-300 transition text-sm lg:text-base'>
       {label}
     </li>
   )

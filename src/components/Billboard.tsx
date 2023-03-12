@@ -1,6 +1,7 @@
 import { useBillboard } from '@/hooks/useBillboard'
 
-import { AiOutlineInfoCircle } from 'react-icons/ai'
+import InfoButton from './InfoButton'
+import PlayButton from './PlayButton'
 
 export function Billboard () {
   const { data } = useBillboard()
@@ -17,7 +18,6 @@ export function Billboard () {
           duration-500
         '
         autoPlay
-        muted
         loop
         src={data?.videoUrl}
         poster={data?.thumbnailUrl}
@@ -56,29 +56,8 @@ export function Billboard () {
           {data?.description}
         </p>
         <div className='flex flex-row  items-center mt-3 md:mt-5 lg:mt-6 gap-3'>
-          <button
-            className='
-              bg-white
-              text-white
-              bg-opacity-30
-              rounded-[0.30rem]
-              py-[0.30rem] md:py-2
-              px-4 md:px-6 xl:px-8
-              w-auto
-              text-[0.60rem] md:text-sm lg:text-lg xl:text-xl
-              font-semibold
-              flex
-              flex-row
-              items-center
-              justify-center
-              hover:bg-opacity-20
-              transition
-              gap-1 md:gap-2
-          '
-          >
-            <AiOutlineInfoCircle className='text-xs md:text-base lg:text-xl xl:text-2xl' />
-            More Info
-          </button>
+          <PlayButton movieId={data?.id} />
+          <InfoButton />
         </div>
       </div>
     </div>

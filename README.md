@@ -13,15 +13,15 @@
 <!-- BUILT WITH -->
 ## 🛠 Built With
 
-- <a href="https://nextjs.org/" target="_blank"><img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=Next.js&logoColor=white" alt="Next.js">
+* <a href="https://nextjs.org/" target="_blank"><img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=Next.js&logoColor=white" alt="Next.js">
 </a>
-- <a href="https://www.typescriptlang.org/" target="_blank"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white" alt="TypeScript">
+* <a href="https://www.typescriptlang.org/" target="_blank"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white" alt="TypeScript">
 </a>
-- <a href="https://tailwindcss.com/" target="_blank"><img src="https://img.shields.io/badge/TailwindCSS-38BDF8?style=for-the-badge&logo=TailwindCSS&logoColor=white" alt="TailwindCSS">
+* <a href="https://tailwindcss.com/" target="_blank"><img src="https://img.shields.io/badge/TailwindCSS-38BDF8?style=for-the-badge&logo=TailwindCSS&logoColor=white" alt="TailwindCSS">
 </a>
-- <a href="https://www.prisma.io/" target="_blank"><img src="https://img.shields.io/badge/prisma-1A202C?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma">
+* <a href="https://www.prisma.io/" target="_blank"><img src="https://img.shields.io/badge/prisma-1A202C?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma">
 </a>
-- <a href="https://www.mongodb.com/" target="_blank"><img src="https://img.shields.io/badge/mongodb-09934E?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
+* <a href="https://www.mongodb.com/" target="_blank"><img src="https://img.shields.io/badge/mongodb-09934E?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
 </a>
 
 <!-- FEATURES -->

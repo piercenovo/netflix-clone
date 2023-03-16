@@ -45,14 +45,14 @@
 <!-- HOW TO USE -->
 ## 🚀 How To Use
 
-###### To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [pnpm](https://pnpm.io/) installed on your computer).
+###### To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [yarn](https://yarnpkg.com/) installed on your computer).
 
 1. Fork this repository and clone the project
 
 ###### Please give me proper credit by linking back to [www.piercenovo.dev](https://www.piercenovo.dev/).
 
 ```bash
-  git clone https://github.com/<YOUR USERNAME>/netflix-clone.git
+  git clone https://github.com/piercenovo/netflix-clone.git
 ```
 
 2. Go to the project directory
@@ -64,13 +64,13 @@
 3. Install dependencies
 
 ```bash
-  pnpm install
+  yarn
 ```
 
 4. Start the server
 
 ```bash
-  pnpm dev
+  yarn dev
 ```
 
 <!-- SETUP .ENV FILE -->

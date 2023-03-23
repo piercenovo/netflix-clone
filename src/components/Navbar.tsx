@@ -1,4 +1,3 @@
-
 import { BsSearch, BsBell } from 'react-icons/bs'
 import { AiFillCaretDown } from 'react-icons/ai'
 

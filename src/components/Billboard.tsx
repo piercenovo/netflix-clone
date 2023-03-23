@@ -18,6 +18,7 @@ export function Billboard () {
           duration-500
         '
         autoPlay
+        muted
         loop
         src={data?.videoUrl}
         poster={data?.thumbnailUrl}
